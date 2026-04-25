@@ -19,13 +19,15 @@ jobs:
         node-version: '18'
 
     - name: Install Dependencies
-      run: npm install
+      run: npm ci
 
     - name: Run Tests
       run: npm test
 
     - name: Run Code Quality (ESLint)
-      run: npx eslint .
+      run: 
+        chmod +x node_modules/.bin/eslint
+        npx eslint .
 
     - name: Build Docker Image
       run: docker build -t cicd-quality .
