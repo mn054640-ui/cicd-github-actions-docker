@@ -4,11 +4,11 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Running tests\"",
-    "lint": "eslint ."
+    "lint": "eslint . --ext .js"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
-    "eslint": "^8.57.1",
+    "eslint": "^9.39.4",
     "eslint-plugin-vue": "^10.9.0",
     "globals": "^17.5.0"
   }
