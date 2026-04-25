@@ -25,7 +25,7 @@ jobs:
       run: npm test
 
     - name: Run Code Quality (ESLint)
-      run: 
+      run: |
         chmod +x node_modules/.bin/eslint
         npx eslint .
 
