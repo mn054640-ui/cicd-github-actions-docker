@@ -4,7 +4,7 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Running tests\"",
-    "lint": "eslint ."
+    "lint": "npx eslint ."
   },
   "devDependencies": {
     "@eslint/js": "^8.57.1",
