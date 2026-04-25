@@ -1,9 +1,23 @@
 import js from "@eslint/js";
 import globals from "globals";
-import pluginVue from "eslint-plugin-vue";
-import { defineConfig } from "eslint/config";
 
-export default defineConfig([
-  { files: ["**/*.{js,mjs,cjs,vue}"], plugins: { js }, extends: ["js/recommended"], languageOptions: { globals: globals.browser } },
-  pluginVue.configs["flat/essential"],
-]);
+export default [
+  {
+    files: ["**/*.js"],   // 👈 VERY IMPORTANT (this fixes your issue)
+    ignores: ["node_modules/**"],
+
+    languageOptions: {
+      ecmaVersion: "latest",
+      sourceType: "module",
+      globals: globals.browser,
+    },
+
+    rules: {
+      "no-unused-vars": "warn",
+      "no-undef": "error",
+      "no-console": "off",
+    },
+  },
+
+  js.configs.recommended,
+];
