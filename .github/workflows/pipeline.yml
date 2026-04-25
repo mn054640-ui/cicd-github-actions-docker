@@ -25,7 +25,7 @@ jobs:
       run: npm test
 
     - name: Run Code Quality (ESLint)
-      run: npm run eslint .
+      run: npm run lint 
 
     - name: Build Docker Image
       run: docker build -t cicd-quality .
