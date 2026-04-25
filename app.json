@@ -1,0 +1,5 @@
+const http = require("http");
+
+http.createServer((req, res) => {
+  res.end("CI/CD with Quality 🚀");
+}).listen(3000);
