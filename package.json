@@ -7,6 +7,10 @@
     "lint": "eslint ."
   },
   "devDependencies": {
-    "eslint": "^8.57.1"
+    "@eslint/js": "^8.57.1",
+    "eslint": "^10.2.1",
+    "eslint-plugin-vue": "^10.9.0",
+    "globals": "^17.5.0",
+    "xyz": "^5.0.0"
   }
 }
